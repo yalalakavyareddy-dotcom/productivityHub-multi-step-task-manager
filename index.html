@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task Manager Wizard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Step 1 -->
+    <div class="page active" id="page1">
+        <h1>Contact Form</h1>
+
+        <input type="text" id="name" placeholder="Enter Name">
+
+        <input type="email" id="email" placeholder="Enter Email">
+
+        <textarea id="message" placeholder="Enter Message"></textarea>
+
+        <button onclick="goToTasks()">Next</button>
+
+        <p id="error"></p>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="page" id="page2">
+
+        <h1>Task Manager</h1>
+
+        <div class="task-box">
+
+            <input type="text" id="taskInput" placeholder="Add Task">
+
+            <button onclick="addTask()">Add</button>
+
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <button class="complete-btn" onclick="showSuccess()">
+            Complete Task
+        </button>
+
+    </div>
+
+    <!-- Step 3 -->
+    <div class="page" id="page3">
+
+        <div class="success-box">
+
+            <h1>🎉 Success!</h1>
+
+            <p>Your task has been completed successfully.</p>
+
+            <h3 id="userInfo"></h3>
+
+            <button onclick="restartApp()">
+                Start Again
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
